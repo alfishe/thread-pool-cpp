@@ -5,10 +5,10 @@ thread-pool-cpp
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
  * It is highly scalable and fast.
- * It is header only.
+ * Header only.
  * No external dependencies, only standard library needed.
- * It implements both work-stealing and work-distribution balancing startegies.
- * It implements cooperative scheduling strategy.
+ * Implements both work-stealing and work-distribution balancing strategies.
+ * Implements cooperative scheduling strategy.
 
 Build it:
 ```
