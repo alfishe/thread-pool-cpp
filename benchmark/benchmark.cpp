@@ -1,3 +1,4 @@
+#include <benchmark/benchmark.h>
 #include <thread_pool.hpp>
 
 #ifdef WITH_ASIO
@@ -147,7 +148,7 @@ struct RepostJob
     }
 };
 
-int main(int, const char* [])
+void customBenchmark()
 {
     std::cout << "Benchmark job reposting" << std::endl;
 
@@ -191,6 +192,17 @@ int main(int, const char* [])
         }
     }
 #endif
+}
+
+int main(int argc, char** argv)
+{
+    std::cout << "Custom benchmarks: " << std::endl;
+    customBenchmark();
+    std::cout << std::endl;
+
+    std::cout << "Google benchmarks: " << std::endl;
+    ::benchmark::Initialize(&argc, argv);
+    ::benchmark::RunSpecifiedBenchmarks();
 
     return 0;
 }
