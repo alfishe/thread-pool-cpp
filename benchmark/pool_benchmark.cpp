@@ -1,14 +1,10 @@
 ﻿#include <benchmark/benchmark.h>
 
+#include "benchmark.h"
 #include <thread_pool.hpp>
 #include <thread>
 #include <vector>
 #include <future>
-
-using namespace tp;
-
-static const size_t CONCURRENCY = 16;
-static const size_t REPOST_COUNT = 1000000;
 
 static void BM_PoolInsert(benchmark::State& state)
 {
@@ -19,7 +15,8 @@ static void BM_PoolInsert(benchmark::State& state)
   for (auto _ : state)
   {
     // This code gets timed
-    ;
+    //thread_pool.post(RepostJob(&thread_pool, &waiters[0]));
+    //waiters[0].get_future().wait();
   }
 }
 
