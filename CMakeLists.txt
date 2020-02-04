@@ -10,9 +10,10 @@ endif()
 
 # gtest
 enable_testing()
-add_subdirectory(googletest)
+add_subdirectory(lib/googletest)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/googletest/googletest/include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib/googletest/googletest/include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib/benchmark/include)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 # Tests
