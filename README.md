@@ -10,6 +10,20 @@ thread-pool-cpp
  * It implements both work-stealing and work-distribution balancing startegies.
  * It implements cooperative scheduling strategy.
 
+Build it:
+```
+mkdir build
+cd build
+cmake ..
+cmake --build . --parallel 8
+```
+
+Benchmark it:
+(assuming you just build it and current folder is /build)
+```
+benchmark/pbenchmark
+```
+
 Example run:
 Post job to thread pool is much faster than for boost::asio based thread pool.
 
