@@ -8,6 +8,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Build Google Benchmark
+option(BENCHMARK_ENABLE_TESTING "Disabling self-testing & benchmarking" OFF)
 get_filename_component(GOOGLEBENCHMARK_DIR ../lib/benchmark ABSOLUTE BASE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 add_subdirectory(${GOOGLEBENCHMARK_DIR} ${CMAKE_CURRENT_BINARY_DIR}/googlebenchmark)
 
